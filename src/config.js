@@ -29,7 +29,7 @@ function (Settings) {
      *  +elasticsearch: {server: "http://localhost:9200", withCredentials: true}+
      *
      */
-    elasticsearch: "http://"+window.location.hostname+":9200",
+    elasticsearch: "http://gbwwsrunlog02:9200",
 
     /** @scratch /configuration/config.js/5
      *
@@ -60,6 +60,7 @@ function (Settings) {
      * dashboard, but this list is used in the "add panel" interface.
      */
     panel_names: [
+      'evohistogram',
       'histogram',
       'map',
       'goal',
