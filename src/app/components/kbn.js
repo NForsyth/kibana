@@ -233,6 +233,22 @@ function($, _, moment) {
     }
   };
 
+  // interval based on base10
+  kbn.describe_number_interval = function (string) {
+    string = parseInt(string,10);
+    if (!_.isNumber(string)) {
+      throw new Error('Invalid interval expecting a number.');
+    } 
+    else 
+    {
+      return {
+        sec: string,
+        type: "",
+        count: 1
+      };
+    }
+  };
+  
   kbn.interval_to_ms = function(string) {
     var info = kbn.describe_interval(string);
     return Math.ceil(info.sec * 1000 * info.count);
